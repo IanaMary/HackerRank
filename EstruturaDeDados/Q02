@@ -1,0 +1,20 @@
+Find Merge Point of Two Lists
+Localizar ponto de mesclagem de duas listas
+--------------------------------------------
+
+int findMergeNode(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+    SinglyLinkedListNode* aux = NULL;
+    while(head1 != NULL && head1->next != NULL) {
+        aux = head2;
+        while (aux != NULL && aux->next != NULL) {
+            if(head1->next == aux->next) {
+                return head1->next->data;
+            }
+            aux = aux->next;
+        }
+        head1 = head1->next;
+    }
+
+    return head1->data;
+
+}

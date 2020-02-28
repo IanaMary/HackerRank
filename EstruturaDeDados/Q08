@@ -1,0 +1,12 @@
+Print in Reverse
+Imprimir em reverso
+--------------------
+
+void reversePrint(SinglyLinkedListNode* head) {
+    if(head != NULL){
+        reversePrint(head->next);
+        printf("%d\n", head->data);
+    }
+
+}
+

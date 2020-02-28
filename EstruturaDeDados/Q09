@@ -1,0 +1,23 @@
+Delete a Node
+Excluir um nó
+--------------
+
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
+    int cont = 1;
+    SinglyLinkedListNode *no = NULL;
+    no = head;
+    if(position > 0) {
+        while(cont < position) {
+                no = no->next;
+                cont++;
+        }
+        no->next = no->next->next;
+        return head;
+    }
+    else {
+        return head->next;
+    }
+}
+
+
+

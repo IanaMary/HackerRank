@@ -1,0 +1,19 @@
+Reverse a linked list
+Inverter uma lista vinculada
+-----------------------------
+
+SinglyLinkedListNode* reverse(SinglyLinkedListNode* head) {
+    SinglyLinkedListNode *anterior, *proximo, *atual;
+    anterior = proximo = NULL;
+    atual = head;
+    while(atual) {
+        proximo = atual->next;
+        atual->next = anterior;
+        anterior = atual;
+        atual = proximo;
+    }
+    return head = anterior;
+
+}
+
+

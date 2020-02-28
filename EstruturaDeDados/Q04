@@ -1,0 +1,23 @@
+Delete duplicate-value nodes from a sorted linked list
+Excluir nós de valor duplicado de uma lista vinculada classificada
+-------------------------------------------------------------------
+
+SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* head) {
+    SinglyLinkedListNode *no;
+    no = head;
+    while (no != NULL && no->next != NULL) {
+        if(no->data == no->next->data) {
+            no->next = no->next->next;
+        }
+        else {
+            no = no->next;
+        }
+    }
+
+    return head;
+
+}
+
+
+
+

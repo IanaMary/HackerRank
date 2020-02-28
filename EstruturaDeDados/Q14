@@ -1,0 +1,19 @@
+Arrays - DS
+Matrizes - DS
+----------------
+
+int* reverseArray(int a_count, int* a, int* result_count) {
+    int* b = malloc(a_count * sizeof(int));
+    for(int i = 0; i < a_count; i++) {
+        b[i] = a[i];
+    }
+    int b_count = 0;
+    while( a_count > 0) {
+        a_count--;
+        a[a_count] = b[b_count];
+        b_count++;
+    }
+    *result_count = b_count;
+    return a;
+
+}

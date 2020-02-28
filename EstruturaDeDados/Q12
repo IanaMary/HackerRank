@@ -1,0 +1,24 @@
+Insert a Node at the Tail of a Linked List
+Inserir um nó no final de uma lista vinculada
+----------------------------------------------
+
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+    SinglyLinkedListNode *no , *novoNo=NULL;
+
+    novoNo=(SinglyLinkedListNode*)malloc((sizeof(SinglyLinkedListNode)));
+    novoNo->data=data;
+    novoNo->next=NULL;
+    
+    if (head==NULL) {
+        head=novoNo;   
+    }
+    else {
+        no=head;
+        while(no->next!=NULL){
+            no = no->next;
+        }
+        no->next= novoNo;
+    } 
+    return head; 
+}
+

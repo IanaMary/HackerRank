@@ -1,0 +1,12 @@
+Print the Elements of a Linked List
+Imprimir os elementos de uma lista vinculada
+---------------------------------------------
+
+void printLinkedList(SinglyLinkedListNode* head) {
+    while (head != NULL) {
+        printf("%d\n", head->data);
+        head = head->next;
+    } 
+
+}
+

@@ -1,0 +1,30 @@
+Insert a node at a specific position in a linked list
+Inserir um nó em uma posição específica em uma lista vinculada
+---------------------------------------------------------------
+
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+
+    SinglyLinkedListNode *no, *novoNo=NULL;
+
+    novoNo=(SinglyLinkedListNode*)malloc((sizeof(SinglyLinkedListNode)));
+    
+    int cont = 1;
+    
+    if (head==NULL) {
+        head=novoNo;   
+    }
+    else {
+        no=head;
+        while(cont < position){
+            no = no->next;
+            cont++;
+        }
+        novoNo->data = data;
+        novoNo->next = no->next;
+        no->next = novoNo;
+    } 
+    return head;
+
+
+}
+

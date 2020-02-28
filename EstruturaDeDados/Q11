@@ -1,0 +1,20 @@
+Insert a node at the head of a linked list
+Inserir um nó no início de uma lista vinculada
+-----------------------------------------------
+
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+    SinglyLinkedListNode *novoNo=NULL;
+    novoNo=(SinglyLinkedListNode*)malloc((sizeof(SinglyLinkedListNode)));
+    novoNo->data=data;
+    novoNo->next=NULL;
+
+    if(llist == NULL) {
+        llist =  novoNo;
+    }
+    else {
+        novoNo->next = llist;
+    }
+    return novoNo;
+
+}
+

@@ -1,0 +1,26 @@
+Cycle Detection
+Detecção de ciclo
+------------------
+
+bool has_cycle(SinglyLinkedListNode* head) {
+    SinglyLinkedListNode* umFrente = head;
+    SinglyLinkedListNode* doisFrente = head;
+    
+    
+    if (head == NULL){
+        return 0;
+    }
+
+    while (doisFrente != NULL && doisFrente->next != NULL){
+        umFrente = umFrente->next;
+        doisFrente = doisFrente->next->next;
+
+        if (umFrente == doisFrente){
+            return 1;
+        }
+    }
+
+    return 0;
+
+
+}
