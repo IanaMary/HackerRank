@@ -1,0 +1,11 @@
+Pointers in C
+Ponteiros em C
+---------------
+
+void update(int *a,int *b) {
+    int c = *a;
+    *a = *a + *b; 
+    *b = abs(c-*b);
+}
+
+

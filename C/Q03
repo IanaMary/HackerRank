@@ -1,0 +1,17 @@
+1D Arrays in C
+Matrizes 1D em C
+-----------------
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n, v, soma = 0;
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &v);
+        soma = soma + v;
+    }
+    printf("%d\n", soma);
+    return 0;
+}
+

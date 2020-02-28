@@ -1,0 +1,12 @@
+Calculate the Nth term
+Calcular o enésimo termo
+-----------------------
+
+int find_nth_term(int n, int a, int b, int c) {
+    if(n <= 3) {
+        return n;
+    }
+    else {
+        return (n-1) + (n-2) + (n-3);
+    }
+}

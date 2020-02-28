@@ -1,0 +1,20 @@
+Playing With Characters
+Brincando com Characters
+-------------------------
+
+int main() {
+    char n1[100];
+    char n2[100];
+    char n3[100];
+
+    scanf("%[^\n]%*c", &n1);
+    scanf("%[^\n]%*c", &n2);
+    scanf("%[^\n]%*c", &n3);
+
+    printf("%s\n", n1);
+    printf("%s\n", n2);
+    printf("%s\n", n3);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}

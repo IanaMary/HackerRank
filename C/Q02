@@ -1,0 +1,26 @@
+Array Reversal
+Reversão de matriz
+------------------
+
+int main()
+{
+    int num, *arr, *a, i, cont;
+    scanf("%d", &num);
+    arr = (int*) malloc(num * sizeof(int));
+    a = (int*) malloc(num * sizeof(int));
+    for(i = 0; i < num; i++) {
+        scanf("%d", a + i);
+    }
+    cont = num;
+    for(i = 0; i < num; i++)  {
+        cont--;
+        arr[i] = a[cont];
+    }
+
+    /* Write the logic to reverse the array. */
+
+    for(i = 0; i < num; i++)
+        printf("%d ", *(arr + i));
+    return 0;
+}
+
